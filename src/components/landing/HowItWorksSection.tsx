@@ -35,7 +35,7 @@ const StepCard = ({ step, index }: { step: typeof pathA[0]; index: number }) => 
     className="flex gap-4"
   >
     <div className="flex flex-col items-center">
-      <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20">
+      <div className="p-2.5 rounded-xl bg-olive-dark border border-olive-dark-border">
         <step.icon className="h-5 w-5 text-primary" />
       </div>
       {index < 4 && <div className="w-px flex-1 bg-border mt-2" />}
@@ -70,14 +70,14 @@ const HowItWorksSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto mb-12"
         >
-          <div className="p-6 rounded-2xl bg-card border shadow-sm flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-primary/10">
+          <div className="p-6 rounded-2xl bg-olive-dark border border-olive-dark-border shadow-sm flex items-start gap-4">
+            <div className="p-3 rounded-xl">
               <shared.icon className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground font-medium mb-1">Step 0 — Shared</p>
-              <h3 className="font-bold text-lg mb-1">{shared.title}</h3>
-              <p className="text-sm text-muted-foreground">{shared.desc}</p>
+              <p className="text-xs text-zinc-400 font-medium mb-1">Step 0 — Shared</p>
+              <h3 className="font-bold text-lg mb-1 text-white">{shared.title}</h3>
+              <p className="text-sm text-zinc-400">{shared.desc}</p>
             </div>
           </div>
         </motion.div>
@@ -91,9 +91,9 @@ const HowItWorksSection = () => {
             </TabsList>
 
             <TabsContent value="self-service">
-              <div className="mb-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                <p className="text-sm font-medium italic">"You drive. We give you the engine."</p>
-                <p className="text-xs text-muted-foreground mt-1">Best for: Technical teams comfortable with N8N who want full control and lower cost.</p>
+              <div className="mb-4 p-4 rounded-xl bg-olive-dark border border-olive-dark-border">
+                <p className="text-sm font-medium italic text-white">"You drive. We give you the engine."</p>
+                <p className="text-xs text-zinc-400 mt-1">Best for: Technical teams comfortable with N8N who want full control and lower cost.</p>
               </div>
               {pathA.map((s, i) => (
                 <StepCard key={s.title} step={s} index={i} />
@@ -101,9 +101,9 @@ const HowItWorksSection = () => {
             </TabsContent>
 
             <TabsContent value="managed">
-              <div className="mb-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                <p className="text-sm font-medium italic">"Sit back. We handle everything."</p>
-                <p className="text-xs text-muted-foreground mt-1">Best for: Businesses that want zero hassle, maximum confidence, and expert hands on the wheel.</p>
+              <div className="mb-4 p-4 rounded-xl bg-olive-dark border border-olive-dark-border">
+                <p className="text-sm font-medium italic text-white">"Sit back. We handle everything."</p>
+                <p className="text-xs text-zinc-400 mt-1">Best for: Businesses that want zero hassle, maximum confidence, and expert hands on the wheel.</p>
               </div>
               {pathB.map((s, i) => (
                 <StepCard key={s.title} step={s} index={i} />

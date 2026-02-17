@@ -9,7 +9,7 @@ const reasons = [
 ];
 
 const WhyN8nSection = () => (
-  <section className="py-24">
+  <section className="py-24 bg-zinc-950">
     <div className="container mx-auto px-4 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -17,8 +17,8 @@ const WhyN8nSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Why n8n?</h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Why n8n?</h2>
+        <p className="text-zinc-400 max-w-xl mx-auto">
           We chose n8n as our backbone for a reason — actually, four reasons.
         </p>
       </motion.div>
@@ -31,13 +31,13 @@ const WhyN8nSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="p-6 rounded-2xl bg-card border shadow-sm hover:shadow-md hover:border-primary/30 transition-all text-center"
+            className="p-6 rounded-2xl bg-olive-dark border border-olive-dark-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all text-center"
           >
-            <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
+            <div className="inline-flex p-3 rounded-xl mb-4">
               <r.icon className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2">{r.title}</h3>
-            <p className="text-sm text-muted-foreground">{r.desc}</p>
+            <h3 className="font-semibold mb-2 text-white">{r.title}</h3>
+            <p className="text-sm text-zinc-400">{r.desc}</p>
           </motion.div>
         ))}
       </div>

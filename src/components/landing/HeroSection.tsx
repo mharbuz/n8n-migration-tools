@@ -29,7 +29,7 @@ const HeroSection = () => (
     <div className="container mx-auto px-4 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div custom={0} initial="hidden" animate="visible" variants={fadeUp} className="mb-6">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-sm font-medium text-foreground border border-primary/20">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-olive-dark text-sm font-medium text-white border border-olive-dark-border">
             <Zap className="h-3.5 w-3.5 text-primary" />
             Powered by n8n Workflows
           </span>
@@ -79,7 +79,7 @@ const HeroSection = () => (
         >
           {platforms.map((p, i) => (
             <div key={p} className="flex items-center gap-3 sm:gap-4">
-              <div className="px-4 py-2 rounded-lg bg-card border text-sm font-medium shadow-sm">
+              <div className="px-4 py-2 rounded-lg bg-olive-dark border border-olive-dark-border text-sm font-medium text-white shadow-sm">
                 {p}
               </div>
               {i < platforms.length - 1 && (

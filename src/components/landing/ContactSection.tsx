@@ -98,14 +98,14 @@ const ContactSection = () => {
             transition={{ delay: 0.2 }}
             className="lg:col-span-2 space-y-6"
           >
-            <div className="p-6 rounded-2xl bg-card border shadow-sm">
-              <h3 className="font-semibold mb-4">Get in Touch</h3>
+            <div className="p-6 rounded-2xl bg-olive-dark border border-olive-dark-border shadow-sm">
+              <h3 className="font-semibold mb-4 text-white">Get in Touch</h3>
               <div className="space-y-4">
-                <a href="mailto:hello@migrateflow.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:hello@migrateflow.com" className="flex items-center gap-3 text-sm text-zinc-400 hover:text-white transition-colors">
                   <Mail className="h-4 w-4 text-primary" />
                   hello@migrateflow.com
                 </a>
-                <a href="tel:+31201234567" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="tel:+31201234567" className="flex items-center gap-3 text-sm text-zinc-400 hover:text-white transition-colors">
                   <Phone className="h-4 w-4 text-primary" />
                   +31 20 123 4567
                 </a>

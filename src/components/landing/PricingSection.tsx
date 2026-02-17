@@ -60,7 +60,7 @@ const PricingSection = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
             className={`relative p-8 rounded-2xl border shadow-sm transition-all hover:shadow-lg ${
-              t.highlight ? "bg-card border-primary/40 shadow-primary/5" : "bg-card"
+              t.highlight ? "bg-olive-dark border-primary/40 shadow-primary/5" : "bg-olive-dark border-olive-dark-border"
             }`}
           >
             {t.highlight && (
@@ -69,12 +69,12 @@ const PricingSection = () => (
               </span>
             )}
             <div className="text-2xl mb-2">{t.emoji}</div>
-            <h3 className="text-xl font-bold mb-1">{t.name}</h3>
-            <p className="text-sm text-muted-foreground mb-4">{t.desc}</p>
-            <p className="text-2xl font-bold mb-6">{t.price}</p>
+            <h3 className="text-xl font-bold mb-1 text-white">{t.name}</h3>
+            <p className="text-sm text-zinc-400 mb-4">{t.desc}</p>
+            <p className="text-2xl font-bold mb-6 text-white">{t.price}</p>
             <ul className="space-y-3 mb-8">
               {t.features.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-sm">
+                <li key={f} className="flex items-start gap-2 text-sm text-zinc-300">
                   <Check className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   <span>{f}</span>
                 </li>

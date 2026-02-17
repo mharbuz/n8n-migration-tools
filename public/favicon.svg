@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#daf529"/>
+  <g fill="#171811">
+    <!-- Left square - top left, not at very top (7.5 = 5 × 1.5) -->
+    <rect x="3.75" y="4.75" width="7.5" height="7.5" rx="0.75"/>
+    <!-- Right top square - same level as left -->
+    <rect x="20.75" y="4.75" width="7.5" height="7.5" rx="0.75"/>
+    <!-- Right bottom square - under the first right -->
+    <rect x="20.75" y="17.75" width="7.5" height="7.5" rx="0.75"/>
+    <!-- Connections: left square to both right squares -->
+    <path d="M11.25 8.5h4.75M16 8.5h4.75M16 8.5v13M16 21.5h4.75" fill="none" stroke="#171811" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -39,11 +39,11 @@ const PlatformsSection = () => {
           {platforms.map((p) => (
             <div
               key={p.name}
-              className="flex flex-col items-center justify-center gap-2 p-6 rounded-xl bg-card border shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
+              className="flex flex-col items-center justify-center gap-2 p-6 rounded-xl bg-olive-dark border border-olive-dark-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
             >
               <Package className="h-8 w-8 text-primary mb-1" />
-              <span className="font-semibold text-sm">{p.name}</span>
-              {p.sub && <span className="text-xs text-muted-foreground">{p.sub}</span>}
+              <span className="font-semibold text-sm text-white">{p.name}</span>
+              {p.sub && <span className="text-xs text-zinc-400">{p.sub}</span>}
             </div>
           ))}
         </motion.div>
@@ -56,18 +56,18 @@ const PlatformsSection = () => {
           transition={{ delay: 0.2 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="p-6 rounded-2xl bg-card border shadow-sm">
-            <h3 className="text-lg font-semibold mb-6 text-center">Migration Path Selector</h3>
+          <div className="p-6 rounded-2xl bg-olive-dark border border-olive-dark-border shadow-sm">
+            <h3 className="text-lg font-semibold mb-6 text-center text-white">Migration Path Selector</h3>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <div className="flex-1 w-full">
-                <label className="text-xs text-muted-foreground mb-2 block">Migrating FROM</label>
+                <label className="text-xs text-zinc-400 mb-2 block">Migrating FROM</label>
                 <div className="grid grid-cols-2 gap-2">
                   {platforms.map((p, i) => (
                     <button
                       key={p.name}
                       onClick={() => { setFrom(i); if (i === to) setTo((i + 1) % platforms.length); }}
                       className={`px-3 py-2 rounded-lg text-sm font-medium border transition-all ${
-                        from === i ? "bg-primary text-primary-foreground border-primary" : "bg-background hover:border-primary/40"
+                        from === i ? "bg-primary text-primary-foreground border-primary" : "bg-[hsl(80,10%,22%)] border-olive-dark-border hover:border-primary/40 text-white"
                       }`}
                     >
                       {p.name}
@@ -79,7 +79,7 @@ const PlatformsSection = () => {
               <ArrowRight className="h-6 w-6 text-primary shrink-0 rotate-90 sm:rotate-0" />
 
               <div className="flex-1 w-full">
-                <label className="text-xs text-muted-foreground mb-2 block">Migrating TO</label>
+                <label className="text-xs text-zinc-400 mb-2 block">Migrating TO</label>
                 <div className="grid grid-cols-2 gap-2">
                   {platforms.map((p, i) => (
                     <button
@@ -87,7 +87,7 @@ const PlatformsSection = () => {
                       onClick={() => { if (i !== from) setTo(i); }}
                       disabled={i === from}
                       className={`px-3 py-2 rounded-lg text-sm font-medium border transition-all ${
-                        to === i ? "bg-primary text-primary-foreground border-primary" : i === from ? "opacity-30 cursor-not-allowed" : "bg-background hover:border-primary/40"
+                        to === i ? "bg-primary text-primary-foreground border-primary" : i === from ? "opacity-30 cursor-not-allowed" : "bg-[hsl(80,10%,22%)] border-olive-dark-border hover:border-primary/40 text-white"
                       }`}
                     >
                       {p.name}
@@ -97,11 +97,11 @@ const PlatformsSection = () => {
               </div>
             </div>
 
-            <div className="mt-6 p-4 rounded-lg bg-primary/5 border border-primary/10 text-center">
-              <p className="text-sm font-medium">
+            <div className="mt-6 p-4 rounded-lg bg-[hsl(80,10%,22%)] border border-olive-dark-border text-center">
+              <p className="text-sm font-medium text-white">
                 {platforms[from].name} → {platforms[to].name}
               </p>
-              <p className="text-xs text-muted-foreground mt-1">Full migration path available ✓</p>
+              <p className="text-xs text-zinc-400 mt-1">Full migration path available ✓</p>
             </div>
           </div>
         </motion.div>

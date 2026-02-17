@@ -74,17 +74,17 @@ const ScopeSection = () => (
             <AccordionItem
               key={s.title}
               value={s.title}
-              className="border rounded-xl px-4 bg-card shadow-sm data-[state=open]:shadow-md transition-shadow"
+              className="border border-olive-dark-border rounded-xl px-4 bg-olive-dark shadow-sm data-[state=open]:shadow-md transition-shadow"
             >
               <AccordionTrigger className="hover:no-underline py-5">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-primary/10">
+                  <div className="p-2 rounded-lg">
                     <s.icon className="h-5 w-5 text-primary" />
                   </div>
-                  <span className="font-semibold">{s.title}</span>
+                  <span className="font-semibold text-white">{s.title}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pb-5 text-muted-foreground">
+              <AccordionContent className="pb-5 text-zinc-400">
                 {s.items}
               </AccordionContent>
             </AccordionItem>

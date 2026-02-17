@@ -35,6 +35,8 @@
     --ring: 68 91% 56%;
 
     --radius: 0.75rem;
+    --olive-dark: 80 10% 18%;
+    --olive-dark-border: 80 8% 28%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -83,6 +85,8 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --olive-dark: 80 10% 18%;
+    --olive-dark-border: 80 8% 28%;
   }
 }
 
