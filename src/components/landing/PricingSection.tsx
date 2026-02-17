@@ -16,6 +16,7 @@ const tiers = [
     ],
     cta: "Get Started",
     href: "#contact",
+    external: false,
     highlight: false,
   },
   {
@@ -31,7 +32,8 @@ const tiers = [
       "Go-live support + 30-day post-migration",
     ],
     cta: "Book a Call",
-    href: "#contact",
+    href: "https://migrateflow.youcanbook.me",
+    external: true,
     highlight: true,
   },
 ];
@@ -85,7 +87,7 @@ const PricingSection = () => (
               className="w-full"
               variant={t.highlight ? "default" : "outline"}
             >
-              <a href={t.href}>{t.cta}</a>
+              <a href={t.href} {...(t.external && { target: "_blank", rel: "noopener noreferrer" })}>{t.cta}</a>
             </Button>
           </motion.div>
         ))}

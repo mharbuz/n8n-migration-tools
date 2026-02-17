@@ -59,7 +59,7 @@ const Navbar = () => {
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
           <Button asChild>
-            <a href="#contact">Book a Call</a>
+            <a href="https://migrateflow.youcanbook.me" target="_blank" rel="noopener noreferrer">Book a Call</a>
           </Button>
         </div>
 
@@ -97,7 +97,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button asChild className="w-full mt-2">
-                <a href="#contact" onClick={() => setOpen(false)}>Book a Call</a>
+                <a href="https://migrateflow.youcanbook.me" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Book a Call</a>
               </Button>
             </div>
           </motion.div>
